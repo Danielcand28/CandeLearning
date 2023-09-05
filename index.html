@@ -13,8 +13,35 @@
 
     <!--Importando JS de Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!--Importando Estilos-->
+    <link rel="stylesheet" href="/CandeLearning/style.css">
 </head>
 <body>
-    
+    <div class="container-fluid contenedor">
+
+        <!--Seccion de la barra de navegacion-->
+        <header class="contenedorBarraNavegacion">
+            <nav class="barraNavegacion">
+
+                <!--Logo-->
+                <a href="#"><img src="/CandeLearning/assets/logoCane.png" alt="logo" class="logo" width="150px"></a>
+                
+                <!--Boton menu responsive-->
+                <label for="menuResponsive" class="menuResponsive">
+                    <i class="fa-solid fa-bars menuResponsivex"></i>
+                </label><input type="checkbox" id="menuResponsive">
+
+                <!--Lista del Navbar-->
+                <ul class="listaNavbar">
+                    <li class="itemsNavbar"><a href="#">Home</a></li>
+                    <li class="itemsNavbar"><a href="#">Cursos</a></li>
+                    <li class="itemsNavbar"><a href="#">Eventos</a></li>
+                    <li class="itemsNavbar"><a href="#">Quienes Somos</a></li>
+                    <li class="itemsNavbar"><a href="#">Contactanos</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 </body>
 </html>

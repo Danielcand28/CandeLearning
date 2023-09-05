@@ -1,0 +1,96 @@
+:root{
+    --margeneslaterales: 0px 40px 0px 40px;
+    --margenesArribaAbajo: 20px 0px 20px 0px;
+    --margeneslateralesResponsive: 0px 20px 0px 20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    padding: 0;
+    margin: 0;
+}
+
+/*Propiedades de la barra de navegacion*/
+.contenedor .contenedorBarraNavegacion .barraNavegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10%;
+    padding: var(--margeneslaterales);
+}
+
+/*Propiedades de la lista de la barra de navegacion*/
+.contenedor .contenedorBarraNavegacion .barraNavegacion .listaNavbar{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    font-size: 18px;
+}
+
+.contenedor .contenedorBarraNavegacion .barraNavegacion .listaNavbar a{
+    text-decoration: none;
+}
+
+/*Boton del menu responsive*/
+.contenedor .contenedorBarraNavegacion .barraNavegacion .menuResponsive{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    display: none;
+}
+
+.contenedor .contenedorBarraNavegacion .barraNavegacion input{
+    display: none;
+}
+
+
+/*Seccion Responsive*/
+@media(max-width: 1080px){
+
+    /*Propiedades del Navbar Responsive*/
+    .contenedor .contenedorBarraNavegacion .barraNavegacion{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        padding: var(--margeneslateralesResponsive);
+    }
+
+    /*Propiedades de la barra de navegacion responsive*/
+    .contenedor .contenedorBarraNavegacion .barraNavegacion .listaNavbar{
+        display: block;
+        position: absolute;
+        transform: translateX(-400%);
+        margin-top: 380px;
+        transition: all .5s;
+    }
+
+    .contenedor .contenedorBarraNavegacion .barraNavegacion .listaNavbar .itemsNavbar{
+        padding:10px 0px 10px 0px;
+    }
+
+    /*Aparicion del menu responsive para despliegue de menu*/
+    .contenedor .contenedorBarraNavegacion .barraNavegacion .menuResponsivex{
+        display: flex;
+        font-size: 40px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .contenedor .contenedorBarraNavegacion .barraNavegacion .menuResponsive{
+        display: flex;
+    }
+
+    .contenedor .contenedorBarraNavegacion .barraNavegacion input:checked + .listaNavbar{
+        display: block;
+        position: absolute;
+        transform: translateX(-10%);
+        transition: all .5s;
+    }
+}
